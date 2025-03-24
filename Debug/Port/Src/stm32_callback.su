@@ -1,0 +1,7 @@
+../Hardware/port/Inc/hw_port_adc.h:127:8:void Hardware_STM32_ADC::dmaCallbackHandler(ADC_HandleTypeDef*)	16	static
+../Hardware/port/Inc/hw_port_adc.h:135:8:void Hardware_STM32_ADC::iTCallbackHandler(ADC_HandleTypeDef*)	16	static
+../Hardware/port/Inc/hw_port_message.h:46:8:void Hardware_STM32_Message::callbackHandler(UART_HandleTypeDef*, uint16_t)	24	static
+../Hardware/port/Inc/hw_port_message.h:84:8:void Hardware_STM32_Message::_startDMA()	16	static
+../Port/Src/stm32_callback.cpp:16:6:void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef*)	16	static
+../Port/Src/stm32_callback.cpp:21:6:void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef*)	16	static
+../Port/Src/stm32_callback.cpp:26:6:void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef*, uint16_t)	16	static

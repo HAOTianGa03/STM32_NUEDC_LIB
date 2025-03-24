@@ -1,0 +1,5 @@
+../Core/Src/usart.c:33:6:MX_USART1_UART_Init	5
+../Core/Src/usart.c:76:6:HAL_UART_MspInit	5
+../Core/Src/usart.c:155:6:HAL_UART_MspDeInit	2
+../Core/Src/usart.c:192:1:__io_putchar	1
+F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:218:5:fgetc	1
