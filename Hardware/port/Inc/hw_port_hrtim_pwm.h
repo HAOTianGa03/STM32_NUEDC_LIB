@@ -85,8 +85,11 @@ public:
 	break;
     }
     period_=__HAL_HRTIM_GETPERIOD(hhrtim_, id_);
-    HAL_HRTIM_WaveformCounterStart(hhrtim_, channel_);  // Start the counter of the Timer
+  }
 
+  void setOutput()
+  {
+    HAL_HRTIM_WaveformCounterStart(hhrtim_, channel_);  // Start the counter of the Timer
   }
 
   void setFrequency(float freq) {

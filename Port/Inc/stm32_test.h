@@ -21,9 +21,16 @@ extern Algorithim_PID g_current_pid;
 
 namespace stm32_test
 {
+  void timerA_pwm_test ()
+  {
+    g_hrtimerA_pwm_handler=stm32_hrtim_pwm::getTimerAOutput();
+    g_hrtimerA_pwm_handler.setDutyCycle(0.3);
+    g_hrtimerA_pwm_handler.setOutput();
+  }
 
   void adc_dma_test ()
   {
+    g_adc1_handler=stm32_adc::getADC1();
     g_adc1_handler.startSample();
     while(1)
       {
@@ -36,6 +43,9 @@ namespace stm32_test
 
   void adc_it_test()
   {
+    //adc注入组测试需要先开启PWM输出
+    timerA_pwm_test();
+    g_adc1_handler=stm32_adc::getADC1();
     g_adc1_handler.startSample_IT();
     while(1)
       {
@@ -49,6 +59,7 @@ namespace stm32_test
 
   void dc_dc_openLoop_test()
   {
+    g_dc_buck_handler=stm32_dc_buck::getDCBuck1(&g_hrtimerA_pwm_handler,&g_adc1_handler,&g_relay1_handler);
     g_dc_buck_handler.setVin(5);
     g_dc_buck_handler.setVout(3.3);
     g_dc_buck_handler.enable();
@@ -60,6 +71,7 @@ namespace stm32_test
 
   void dc_dc_voltageClosedLoop_test()
   {
+    g_dc_buck_handler=stm32_dc_buck::getDCBuck1(&g_hrtimerA_pwm_handler,&g_adc1_handler,&g_relay1_handler);
     g_dc_buck_handler.setVin(5);
     g_dc_buck_handler.setVout(3.3);
     g_voltage_pid.begin(0, 0, 0);
@@ -74,6 +86,7 @@ namespace stm32_test
 
   void dc_dc_doubleMode_closedLoop_test()
   {
+    g_dc_buck_handler=stm32_dc_buck::getDCBuck1(&g_hrtimerA_pwm_handler,&g_adc1_handler,&g_relay1_handler);
     g_dc_buck_handler.setVin(5);
     g_dc_buck_handler.setVout(3.3);
     g_voltage_pid.begin(0, 0, 0);
@@ -82,8 +95,7 @@ namespace stm32_test
     g_dc_buck_handler.setCC_PID(&g_current_pid);
     g_dc_buck_handler.enable();
     while (1)
-      {
-
+      {//TO DO，完成切换模式逻辑
 	g_dc_buck_handler.closedVoltageLoopControl();
       }
   }

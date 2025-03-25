@@ -116,6 +116,7 @@ int main(void)
 
   //高级定时器抽象层初始化
   g_hrtimerA_pwm_handler=stm32_hrtim_pwm::getTimerAOutput();
+  g_hrtimerA_pwm_handler.setOutput();
   g_hrtimerA_pwm_handler.setDutyCycle(0.3);
 
   //ADC抽象层初始化
