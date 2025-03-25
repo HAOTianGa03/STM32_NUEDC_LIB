@@ -321,6 +321,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
   g_message_handler.callbackHandler(huart, Size);
 }
 ```
-
+* 代码缩进方式请在cubeide中设置并修改为GNU
+![pic](pic/fommat.png)
 ### 4、开发进度
 ##### markdown做表格太麻烦，这个记录在飞书中
