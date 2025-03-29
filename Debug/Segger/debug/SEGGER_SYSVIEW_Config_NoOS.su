@@ -1,0 +1,2 @@
+../Segger/debug/SEGGER_SYSVIEW_Config_NoOS.c:121:13:_cbSendSystemDesc	8	static
+../Segger/debug/SEGGER_SYSVIEW_Config_NoOS.c:132:6:SEGGER_SYSVIEW_Conf	8	static

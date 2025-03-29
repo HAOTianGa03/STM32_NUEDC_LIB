@@ -23,7 +23,7 @@
 #include "hrtim.h"
 #include "usart.h"
 #include "gpio.h"
-
+#include "tim.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stm32_hrtim_pwm.h"
@@ -32,6 +32,8 @@
 #include "stm32_relay.h"
 #include "stm32_test.h"
 #include "stm32_message.h"
+#include "SEGGER_SYSVIEW.h"
+#include "SEGGER_SYSVIEW_Conf.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,12 +51,52 @@ Algorithim_PID g_current_pid;
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
+volatile unsigned int _TestFunc0Cnt;
+volatile unsigned int _TestFunc1Cnt;
 
+
+/*********************************************************************
+ *
+ *       Local functions
+ *
+ **********************************************************************
+ */
+
+/*********************************************************************
+ *
+ *       _TestFunc1()
+ *
+ *  Function description
+ *    Simple dummy function.
+ */
+static void _TestFunc1(void) {
+  SEGGER_SYSVIEW_RecordVoid(34);
+  _TestFunc1Cnt = 100;
+  do {
+      _TestFunc1Cnt--;
+  } while (_TestFunc1Cnt);
+  SEGGER_SYSVIEW_RecordEndCall(34);
+}
+
+/*********************************************************************
+ *
+ *       _TestFunc0()
+ *
+ *  Function description
+ *    Simple dummy calling _TestFunc1()
+ */
+static void _TestFunc0(void) {
+  SEGGER_SYSVIEW_RecordVoid(33);
+  _TestFunc0Cnt = 100;
+  while(50 < --_TestFunc0Cnt);
+  _TestFunc1();
+  while(--_TestFunc0Cnt);
+  SEGGER_SYSVIEW_RecordEndCall(33);
+}
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -107,9 +149,16 @@ int main(void)
   MX_ADC1_Init();
   MX_HRTIM1_Init();
   MX_USART1_UART_Init();
-
+  MX_ADC2_Init();
+  MX_ADC3_Init();
+  MX_TIM1_Init();
 
   /* USER CODE BEGIN 2 */
+  SEGGER_SYSVIEW_Conf();            /* Configure and initialize SystemView  */
+  SEGGER_SYSVIEW_Start();           /* Starts SystemView recording*/
+  SEGGER_SYSVIEW_OnIdle();          /* Tells SystemView that System is currently in "Idle"*/
+  //定时事件处理
+  //  HAL_TIM_Base_Start_IT(&htim1);
   //串口抽象层初始化
   g_message_handler=stm32_message::getUART1();
   g_message_handler.startReceive();
@@ -121,12 +170,13 @@ int main(void)
 
   //ADC抽象层初始化
   g_adc1_handler=stm32_adc::getADC1();
-
-  //继电器抽象层初始化
+  g_adc1_handler.startSample();
+  __HAL_DMA_DISABLE_IT(&hdma_adc1, DMA_IT_HT);
+  //  //继电器抽象层初始化
   g_relay1_handler=stm32_relay::getRelay1();
 
   //算法抽象层初始化
-  g_dc_buck_handler=stm32_dc_buck::getDCBuck1(&g_hrtimerA_pwm_handler,&g_adc1_handler,&g_relay1_handler);
+  //  g_dc_buck_handler=stm32_dc_buck::getDCBuck1(&g_hrtimerA_pwm_handler,&g_adc1_handler,&g_relay1_handler);
 
   /* USER CODE END 2 */
 
@@ -135,7 +185,10 @@ int main(void)
   while (1)
     {
       /* USER CODE END WHILE */
-      stm32_test::adc_it_test();
+      //      _TestFunc0();
+      //      stm32_test::dc_dc_doubleMode_closedLoop_test();
+      stm32_test::dc_dc_doubleMode_closedLoop_test();
+      stm32_test::vofa_send_test();
 
       /* USER CODE BEGIN 3 */
     }

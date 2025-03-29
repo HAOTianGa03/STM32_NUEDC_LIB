@@ -9,21 +9,22 @@ F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide
 F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\stl_vector.h:133:14:constexpr std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl::~_Vector_impl()	16	static
 F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\stl_vector.h:312:7:constexpr std::_Vector_base<_Tp, _Alloc>::_Vector_base() [with _Tp = long unsigned int; _Alloc = std::allocator<long unsigned int>]	16	static
 F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\stl_vector.h:526:7:constexpr std::vector<_Tp, _Alloc>::vector() [with _Tp = long unsigned int; _Alloc = std::allocator<long unsigned int>]	16	static
-../Hardware/port/Inc/hw_port_adc.h:34:3:Hardware_STM32_ADC::Hardware_STM32_ADC()	16	static
-../Hardware/port/Inc/hw_port_adc.h:39:23:Hardware_STM32_ADC& Hardware_STM32_ADC::operator=(Hardware_STM32_ADC&&)	16	static
-../Hardware/port/Inc/hw_port_adc.h:55:8:void Hardware_STM32_ADC::begin(ADC_HandleTypeDef*, hw_stm32_adc_mode_t)	48	static
-../Hardware/port/Inc/hw_port_adc.h:64:8:void Hardware_STM32_ADC::startSample()	24	static
-../Hardware/port/Inc/hw_port_adc.h:81:8:void Hardware_STM32_ADC::startSample_IT()	16	static
-../Hardware/port/Inc/hw_port_adc.h:91:9:float Hardware_STM32_ADC::readVoltage()	16	static
-../Hardware/port/Inc/hw_port_adc.h:102:9:float Hardware_STM32_ADC::readCurrent()	16	static
-../Hardware/port/Inc/hw_port_adc.h:113:9:float Hardware_STM32_ADC::readVoltage_IT()	16	static
-../Hardware/port/Inc/hw_port_adc.h:120:9:float Hardware_STM32_ADC::readCurrent_IT()	16	static
-../Hardware/port/Inc/hw_port_adc.h:31:7:constexpr Hardware_STM32_ADC::~Hardware_STM32_ADC()	16	static
+../Hardware/port/Inc/hw_port_adc.h:35:3:Hardware_STM32_ADC::Hardware_STM32_ADC()	16	static
+../Hardware/port/Inc/hw_port_adc.h:40:23:Hardware_STM32_ADC& Hardware_STM32_ADC::operator=(Hardware_STM32_ADC&&)	16	static
+../Hardware/port/Inc/hw_port_adc.h:56:8:void Hardware_STM32_ADC::begin(ADC_HandleTypeDef*, hw_stm32_adc_mode_t)	48	static
+../Hardware/port/Inc/hw_port_adc.h:65:8:void Hardware_STM32_ADC::startSample()	24	static
+../Hardware/port/Inc/hw_port_adc.h:82:8:void Hardware_STM32_ADC::startSample_IT()	16	static
+../Hardware/port/Inc/hw_port_adc.h:92:9:float Hardware_STM32_ADC::readVoltage()	16	static
+../Hardware/port/Inc/hw_port_adc.h:103:9:float Hardware_STM32_ADC::readCurrent()	16	static
+../Hardware/port/Inc/hw_port_adc.h:114:9:float Hardware_STM32_ADC::readVoltage_IT()	16	static
+../Hardware/port/Inc/hw_port_adc.h:121:9:float Hardware_STM32_ADC::readCurrent_IT()	16	static
+../Hardware/port/Inc/hw_port_adc.h:32:7:constexpr Hardware_STM32_ADC::~Hardware_STM32_ADC()	16	static
 ../Port/Inc/stm32_adc.h:16:22:Hardware_STM32_ADC stm32_adc::getADC1()	16	static
-../App/algorithim/Inc/alg_pid.h:30:7:void Algorithim_PID::begin(float, float, float, float, float, float)	40	static
-../App/algorithim/Inc/alg_pid.h:86:8:float Algorithim_PID::cal_increase(float, float)	48	static
+../App/algorithim/Inc/alg_pid.h:30:8:void Algorithim_PID::begin(float, float, float, float, float, float)	40	static
+../App/algorithim/Inc/alg_pid.h:76:9:float Algorithim_PID::cal_increase(float, float)	48	static
 ../Hardware/port/Inc/hw_port_relay.h:16:8:void Hardware_STM32_Relay::begin(GPIO_TypeDef*, uint16_t, uint8_t)	24	static
 ../Hardware/port/Inc/hw_port_relay.h:24:8:void Hardware_STM32_Relay::on()	24	static
+../Hardware/port/Inc/hw_port_relay.h:32:8:void Hardware_STM32_Relay::off()	24	static
 ../Port/Inc/stm32_relay.h:15:24:Hardware_STM32_Relay stm32_relay::getRelay1()	16	static
 ../Port/Inc/stm32_dc_buck.h:21:3:Algorithim_DC_Buck<Hardware_STM32_HRTIM_PWM, Hardware_STM32_ADC, Hardware_STM32_Relay> stm32_dc_buck::getDCBuck1(Hardware_STM32_HRTIM_PWM*, Hardware_STM32_ADC*, Hardware_STM32_Relay*)	32	static
 ../Hardware/port/Inc/hw_port_message.h:24:8:void Hardware_STM32_Message::begin(uint16_t, size_t, UART_HandleTypeDef*)	40	static
@@ -32,20 +33,22 @@ F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide
 ../Hardware/port/Inc/hw_port_message.h:63:8:void Hardware_STM32_Message::processHandler()	16	static
 ../Hardware/port/Inc/hw_port_message.h:84:8:void Hardware_STM32_Message::_startDMA()	16	static
 ../Hardware/port/Inc/hw_port_message.h:21:7:constexpr Hardware_STM32_Message::Hardware_STM32_Message()	16	static
-../Port/Inc/stm32_message.h:17:26:Hardware_STM32_Message stm32_message::getUART1()	16	static
-../Port/Inc/stm32_message.h:24:8:void stm32_message::vofaReceiveCallback(uint8_t*, uint16_t)	40	static
-../Port/Inc/stm32_test.h:24:8:void stm32_test::timerA_pwm_test()	40	static
-../Port/Inc/stm32_test.h:31:8:void stm32_test::adc_dma_test()	32	static
-../Port/Inc/stm32_test.h:44:8:void stm32_test::adc_it_test()	32	static
-../Port/Inc/stm32_test.h:60:8:void stm32_test::dc_dc_openLoop_test()	56	static
-../Port/Inc/stm32_test.h:72:8:void stm32_test::dc_dc_voltageClosedLoop_test()	56	static
-../Port/Inc/stm32_test.h:87:8:void stm32_test::dc_dc_doubleMode_closedLoop_test()	56	static
-../Port/Inc/stm32_test.h:103:8:void stm32_test::vofa_send_test()	8	static
-../Port/Inc/stm32_test.h:109:8:void stm32_test::vofa_receive_callback_test(uint8_t*, uint16_t)	24	static
-../Port/Inc/stm32_test.h:117:8:void stm32_test::vofa_receive_test()	8	static
-../Core/Src/main.cpp:81:5:int main()	104	static
-../Core/Src/main.cpp:150:6:void SystemClock_Config()	88	static
-../Core/Src/main.cpp:200:6:void Error_Handler()	4	static,ignoring_inline_asm
+../Port/Inc/stm32_message.h:18:26:Hardware_STM32_Message stm32_message::getUART1()	16	static
+../Port/Inc/stm32_test.h:58:8:void stm32_test::vofaReceiveCallback(uint8_t*, uint16_t)	40	static
+../Port/Inc/stm32_test.h:162:8:void stm32_test::timerA_pwm_test()	40	static
+../Port/Inc/stm32_test.h:169:8:void stm32_test::adc_dma_test()	64	static
+../Port/Inc/stm32_test.h:186:8:void stm32_test::adc_it_test()	32	static
+../Port/Inc/stm32_test.h:202:8:void stm32_test::dc_dc_openLoop_test()	56	static
+../Port/Inc/stm32_test.h:214:8:void stm32_test::dc_dc_voltageClosedLoop_test()	56	static
+../Port/Inc/stm32_test.h:228:8:void stm32_test::dc_dc_doubleMode_closedLoop_test()	56	static
+../Port/Inc/stm32_test.h:283:8:void stm32_test::vofa_send_test()	8	static
+../Port/Inc/stm32_test.h:289:8:void stm32_test::vofa_receive_callback_test(uint8_t*, uint16_t)	24	static
+../Port/Inc/stm32_test.h:297:8:void stm32_test::vofa_receive_test()	8	static
+../Core/Src/main.cpp:76:13:void _TestFunc1()	8	static
+../Core/Src/main.cpp:92:13:void _TestFunc0()	8	static
+../Core/Src/main.cpp:123:5:int main()	64	static
+../Core/Src/main.cpp:203:6:void SystemClock_Config()	88	static
+../Core/Src/main.cpp:253:6:void Error_Handler()	4	static,ignoring_inline_asm
 F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\stl_vector.h:137:2:constexpr std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_Vector_impl() [with _Tp = long unsigned int; _Alloc = std::allocator<long unsigned int>]	16	static
 F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\allocator.h:174:7:constexpr std::allocator< <template-parameter-1-1> >::~allocator() [with _Tp = long unsigned int]	16	static
 F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\stl_vector.h:364:7:constexpr std::_Vector_base<_Tp, _Alloc>::~_Vector_base() [with _Tp = long unsigned int; _Alloc = std::allocator<long unsigned int>]	16	static
@@ -69,6 +72,9 @@ F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide
 ../App/algorithim/Inc/alg_dc_buck.h:45:8:void Algorithim_DC_Buck<PWM, ADC, RELAY>::setCV_PID(Algorithim_PID*) [with PWM = Hardware_STM32_HRTIM_PWM; ADC = Hardware_STM32_ADC; RELAY = Hardware_STM32_Relay]	16	static
 ../App/algorithim/Inc/alg_dc_buck.h:81:8:void Algorithim_DC_Buck<PWM, ADC, RELAY>::closedVoltageLoopControl() [with PWM = Hardware_STM32_HRTIM_PWM; ADC = Hardware_STM32_ADC; RELAY = Hardware_STM32_Relay]	40	static
 ../App/algorithim/Inc/alg_dc_buck.h:50:8:void Algorithim_DC_Buck<PWM, ADC, RELAY>::setCC_PID(Algorithim_PID*) [with PWM = Hardware_STM32_HRTIM_PWM; ADC = Hardware_STM32_ADC; RELAY = Hardware_STM32_Relay]	16	static
+../App/algorithim/Inc/alg_dc_buck.h:101:8:void Algorithim_DC_Buck<PWM, ADC, RELAY>::disable() [with PWM = Hardware_STM32_HRTIM_PWM; ADC = Hardware_STM32_ADC; RELAY = Hardware_STM32_Relay]	16	static
+../App/algorithim/Inc/alg_dc_buck.h:106:8:bool Algorithim_DC_Buck<PWM, ADC, RELAY>::isEnable() [with PWM = Hardware_STM32_HRTIM_PWM; ADC = Hardware_STM32_ADC; RELAY = Hardware_STM32_Relay]	16	static
+../App/algorithim/Inc/alg_dc_buck.h:88:8:void Algorithim_DC_Buck<PWM, ADC, RELAY>::closedCurrentLoopControl() [with PWM = Hardware_STM32_HRTIM_PWM; ADC = Hardware_STM32_ADC; RELAY = Hardware_STM32_Relay]	40	static
 F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\stl_vector.h:99:2:constexpr std::_Vector_base<_Tp, _Alloc>::_Vector_impl_data::_Vector_impl_data() [with _Tp = long unsigned int; _Alloc = std::allocator<long unsigned int>]	16	static
 F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\stl_vector.h:383:7:constexpr void std::_Vector_base<_Tp, _Alloc>::_M_deallocate(pointer, std::size_t) [with _Tp = long unsigned int; _Alloc = std::allocator<long unsigned int>]	24	static
 F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\stl_vector.h:298:7:constexpr std::_Vector_base<_Tp, _Alloc>::_Tp_alloc_type& std::_Vector_base<_Tp, _Alloc>::_M_get_Tp_allocator() [with _Tp = long unsigned int; _Alloc = std::allocator<long unsigned int>]	16	static
@@ -126,6 +132,6 @@ F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide
 F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\new_allocator.h:210:7:constexpr std::__new_allocator<_Tp>::size_type std::__new_allocator<_Tp>::_M_max_size() const [with _Tp = long unsigned int]	16	static
 F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\stl_algobase.h:967:5:constexpr void std::__fill_a(_FIte, _FIte, const _Tp&) [with _FIte = long unsigned int*; _Tp = long unsigned int]	24	static
 F:\CubeIDE\CUBEIDE\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\stl_algobase.h:917:5:constexpr typename __gnu_cxx::__enable_if<std::__is_scalar<_Tp>::__value, void>::__type std::__fill_a1(_ForwardIterator, _ForwardIterator, const _Tp&) [with _ForwardIterator = long unsigned int*; _Tp = long unsigned int]	32	static
-../Core/Src/main.cpp:209:1:void __static_initialization_and_destruction_0(int, int)	16	static
-../Core/Src/main.cpp:209:1:cpp)	8	static
-../Core/Src/main.cpp:209:1:cpp)	8	static
+../Core/Src/main.cpp:262:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/main.cpp:262:1:cpp)	8	static
+../Core/Src/main.cpp:262:1:cpp)	8	static

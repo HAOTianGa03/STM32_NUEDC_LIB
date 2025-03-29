@@ -29,10 +29,18 @@ Port/Src/stm32_callback.o: ../Port/Src/stm32_callback.cpp \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_hrtim.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h \
+ ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h \
+ ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h \
- ../Port/Inc/portmacro.h ../Hardware/port/Inc/hw_port_message.h \
- ../Core/Inc/usart.h ../Core/Inc/main.h
+ ../Port/Inc/portmacro.h ../Core/Inc/adc.h ../Core/Inc/main.h \
+ ../Hardware/port/Inc/hw_port_message.h ../Core/Inc/usart.h \
+ ../Core/Inc/tim.h ../Segger/SystemView/SEGGER_SYSVIEW_Conf.h \
+ ../Segger/SystemView/SEGGER_SYSVIEW.h ../Segger/SystemView/SEGGER.h \
+ ../Segger/SystemView/Global.h \
+ ../Segger/SystemView/SEGGER_SYSVIEW_ConfDefaults.h \
+ ../Segger/SystemView/SEGGER_SYSVIEW_Conf.h \
+ ../Segger/SystemView/SEGGER_RTT_Conf.h
 ../Hardware/port/Inc/hw_port_adc.h:
 ../Hardware/hal/Inc/hw_hal_adc.h:
 ../Core/Inc/main.h:
@@ -65,9 +73,20 @@ Port/Src/stm32_callback.o: ../Port/Src/stm32_callback.cpp \
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_hrtim.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h:
 ../Port/Inc/portmacro.h:
+../Core/Inc/adc.h:
+../Core/Inc/main.h:
 ../Hardware/port/Inc/hw_port_message.h:
 ../Core/Inc/usart.h:
-../Core/Inc/main.h:
+../Core/Inc/tim.h:
+../Segger/SystemView/SEGGER_SYSVIEW_Conf.h:
+../Segger/SystemView/SEGGER_SYSVIEW.h:
+../Segger/SystemView/SEGGER.h:
+../Segger/SystemView/Global.h:
+../Segger/SystemView/SEGGER_SYSVIEW_ConfDefaults.h:
+../Segger/SystemView/SEGGER_SYSVIEW_Conf.h:
+../Segger/SystemView/SEGGER_RTT_Conf.h:

@@ -39,7 +39,7 @@ extern ADC_HandleTypeDef hadc2;
 extern ADC_HandleTypeDef hadc3;
 
 /* USER CODE BEGIN Private defines */
-
+extern DMA_HandleTypeDef hdma_adc1;
 /* USER CODE END Private defines */
 
 void MX_ADC1_Init(void);

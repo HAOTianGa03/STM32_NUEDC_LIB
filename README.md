@@ -323,5 +323,29 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 ```
 * 代码缩进方式请在cubeide中设置并修改为GNU
 ![pic](pic/fommat.png)
+<br>
+
+* 为了描述应用层逻辑的结构体、枚举类状态值的类型应遵循以下命名:
+```cpp
+  enum power_control_mode_t//用于描述不同的模式，用_t结尾
+  {
+    VOLTAGE_CLOSE_LOOP,
+    CURRENT_CLOSE_LOOP
+  };
+
+  enum vofa_isResetPID_bool_t//描述状态值，同样以_t结尾
+  {
+    NO_RESET_PID,
+    RESET_PID
+  };
+
+    struct target_vofa_set_value_t//用于应用层调用pid设置目标值，同样以_t结尾
+  {
+    float target_voltage;
+    float target_current;
+  };
+//上面的例子_t前面的一个单词用来描述这个东西是状态？模式？还是值？这样表意会更清晰
+```
+
 ### 4、开发进度
 ##### markdown做表格太麻烦，这个记录在飞书中

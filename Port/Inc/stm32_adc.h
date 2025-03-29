@@ -17,6 +17,7 @@ namespace stm32_adc
   {
     Hardware_STM32_ADC adc;
     adc.begin(&hadc1, STM32_ADC_SINGLE_ENDED);
+
     return adc;
   }
 }

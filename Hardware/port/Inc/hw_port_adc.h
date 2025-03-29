@@ -9,6 +9,7 @@
 #define PORT_INC_HW_PORT_ADC_H_
 
 #include "hw_hal_adc.h"
+#include "adc.h"
 #include <utility>
 #include <vector>
 
@@ -63,7 +64,7 @@ public:
 
   void startSample()
   {
-    HAL_ADC_Start_DMA(hadc_, readData_.data(), readData_.size());
+    HAL_ADC_Start_DMA(hadc_, readData_.data(), readData_.size());\
   }
 
   void stopSample() {
@@ -118,7 +119,8 @@ public:
   }
 
   float readCurrent_IT() {
-    while (isDataReady_IT_ != STM32_ADC_IT_READY) {}
+    while (isDataReady_IT_ != STM32_ADC_IT_READY){}
+
     isDataReady_IT_=STM32_ADC_IT_NOT_READY;
     //    HAL_ADCEx_InjectedStart_IT(hadc_);
     return hadc_->Instance->JDR2 / 4096.0f * 3.3f;
